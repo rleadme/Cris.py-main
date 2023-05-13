@@ -7,7 +7,7 @@ public enum GameScene
 {
     MainMenu,
     GameOver,
-    GameScene,
+    GameScene1,
 }
 
 
@@ -36,7 +36,7 @@ public class Game_Scene_Loader : MonoBehaviour
                 // LoadScene("GameOver");
                 break;
 
-            case GameScene.GameScene:
+            case GameScene.GameScene1:
                 isGameStart = true;
                 LoadScene("TestMap");
                 break;
