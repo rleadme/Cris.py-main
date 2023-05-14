@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum GameScene
+public enum GameSceneCrisPy
 {
     MainMenu,
     GameOver,
@@ -22,21 +22,21 @@ public class Game_Scene_Loader : MonoBehaviour
     }
 
 
-    public void SceneLoader(GameScene scene)
+    public void LoadScene(GameSceneCrisPy scene)
     {
         switch (scene)
         {
-            case GameScene.MainMenu:
+            case GameSceneCrisPy.MainMenu:
                 isGameStart = false;
                 LoadScene("MainMenu");
                 break;
 
-            case GameScene.GameOver:
+            case GameSceneCrisPy.GameOver:
                 isGameStart = false;
                 // LoadScene("GameOver");
                 break;
 
-            case GameScene.GameScene1:
+            case GameSceneCrisPy.GameScene1:
                 isGameStart = true;
                 LoadScene("TestMap");
                 break;

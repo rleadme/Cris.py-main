@@ -47,7 +47,7 @@ public class Button_MainUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             case BtnTypeMainUI.GameStart:
                 Debug.Log("GameStart");
-                sceneLoader.SceneLoader(GameScene.GameScene1);
+                sceneLoader.LoadScene(GameSceneCrisPy.GameScene1);
                 break;
 
             case BtnTypeMainUI.GameStartNew:
