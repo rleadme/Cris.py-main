@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 332969284}
   - component: {fileID: 332969286}
   - component: {fileID: 332969285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\uC810\uD504\uD14C\uC2A4\uD2B8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 414778296}
   - component: {fileID: 414778298}
   - component: {fileID: 414778297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\uC810\uD504\uD14C\uC2A4\uD2B8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1289,9 +1289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31093b0e6de5f84c888b9b5da7878a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePower: 2
-  jumpPower: 1.5
-  health: 4
+  movePower: 5
+  jumpPower: 2.5
+  health: 5
   isAlive: 1
 --- !u!1 &1656530244
 GameObject:
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 1937346341}
   - component: {fileID: 1937346343}
   - component: {fileID: 1937346342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\uC810\uD504\uD14C\uC2A4\uD2B8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,9 +1527,9 @@ GameObject:
   - component: {fileID: 1938549692}
   - component: {fileID: 1938549694}
   - component: {fileID: 1938549693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\uBC14\uB2E5"
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
