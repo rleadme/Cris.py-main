@@ -60,9 +60,11 @@ public class Player_Cris_py : MonoBehaviour
         {
             PlayerMoving();
 
-            CheckJumpingGround();
-
-            if (isJumping == false)
+            if (isJumping == true)
+            {
+                CheckJumpingGround();
+            }
+            else // isJumping == false
             {
                 PlayerJumpingGFX();
             }
