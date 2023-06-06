@@ -45,6 +45,7 @@ public class Player_Cris_py : MonoBehaviour
     {
         if(isAlive == true)
         {
+            RayShoot();
             PlayerMovingGFX();
 
             if(isJumping == false)
@@ -158,6 +159,46 @@ public class Player_Cris_py : MonoBehaviour
             {
                 isJumping = false;
                 // animator.SetBool("isJumping", false);
+            }
+        }
+    }
+
+    enum MouseButton
+    {
+        Left = 0,
+        Right = 1,
+        Wheel = 2
+    }
+
+    void RayShoot()
+    {
+        const float rayDistance = Mathf.Infinity;
+
+        if (Input.GetMouseButtonDown((int)MouseButton.Left) == true)
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 rayLine = mousePosition - transform.position;
+
+            float angle = Mathf.Atan2(rayLine.y, rayLine.x) * Mathf.Rad2Deg;
+            Vector3 rayDirection = Quaternion.Euler(0, 0, angle) * Vector3.right;
+
+            // Ignore Player Layer, 2-Bit Opearation
+            int ignoreLayerMask = ~(1 << LayerMask.NameToLayer("Player"));
+            RaycastHit2D rayHit = Physics2D.Raycast(transform.position, rayDirection, rayDistance, ignoreLayerMask); // Mathf.Infinity
+            
+            Debug.DrawRay(rigidBody.position, rayDirection, new Color(0.0f, 1.0f, 0.0f));
+
+            if (rayHit.collider != null)
+            {
+                Debug.Log("Hit Collider : " + rayHit.collider.ToString());
+
+                if (rayHit.collider.tag == "Enemy")
+                {
+                    // Destroy(rayHit.collider.gameObject);
+
+                    TEMP_Enemy enemyObject = rayHit.collider.gameObject.GetComponent<TEMP_Enemy>();
+                    enemyObject.TakeDamaged(10);
+                }
             }
         }
     }
